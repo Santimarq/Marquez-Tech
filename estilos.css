@@ -1,0 +1,543 @@
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+:root{
+    --negro:#000;
+    --azuloscuro: #006fe6;
+    --blanco: #fff;
+    --titulos: 'Baloo 2', cursive;
+    --parrafos : 'Montserrat', sans-serif;
+}
+h1,h2,h3{
+    font-family: var(--titulos);
+   
+}
+p,a{
+    font-family: var(--parrafos);
+}
+/*Encabezado Header */
+
+.encabezado{
+  background-image: url(https://ezdevs.com.br/wp-content/uploads/2019/05/288044-veja-como-escolher-uma-empresa-de-desenvolvimento-de-software.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 70rem;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;   
+}
+.encabezado::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.2);
+    z-index: -1;
+    
+}
+
+ .ocultar{
+    display: none;
+}
+.contenedor{
+    margin : 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+.btn{
+    padding: 1rem 4rem;
+    font-weight: bold;
+    font-family: var(--parrafos);
+    font-size: 2rem;
+    border: none;
+    color: #FEF5E7;
+    cursor: pointer;
+  
+    
+    
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #000;
+    
+    
+}
+.bordes{
+    border: solid 1px var(--azuloscuro);
+    color: var(--azuloscuro);
+    display: block;
+    text-align: center;
+    transition: background-color .3s ease-in-out;
+  
+    
+
+    
+}
+@media(min-width:768px){
+    .bordes{
+        display: inline-block;
+        margin-top: 1rem;
+      
+    }}
+
+
+
+.bordes:hover{
+    background-color: var(--azuloscuro);
+    color: var(--blanco);
+    cursor: pointer;
+}
+.azul{
+    background-color: var(--azuloscuro);
+}
+@keyframes dezplazamiento {
+    /* Dezplazamiento inicial */
+    0%{
+        transform: translate(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.contenido-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #A0BFBF;
+    box-shadow:  10px 10px  10px  16px -6px rgba(13, 11, 11, 0.45);
+    background-color: unset;
+    box-shadow: -1px 14px 42px -5px rgba(0,0,0,1);
+ 
+
+}
+a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--blanco);
+}
+.logo h2{
+    font-size: 3rem;
+    color: #424949 ;
+}
+.logo h2 span{
+    color: var(--azuloscuro);
+    
+    
+}
+
+.navegacion{
+    background-color: var(--blanco);
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    animation: desplazamiento .5s ease-in-out;
+    animation: unset;
+    background-color: unset;
+    
+}
+@media(min-width:768px){
+    .ocultar{
+        display: inline;
+    }
+}
+
+.navegacion a{
+    display: block;
+    font-size: 2rem;
+    padding: 1,1rem;
+    color: var(--negro);
+    text-align: center;
+     color: #FEF5E7;
+   background-color: unset;
+   margin-left: 3rem;
+  transition: all 1s ease-in-out;
+   margin: 1rem;
+   
+   
+}
+.navegacion a:hover{
+   
+    transition: all 1s ease-in-out;
+}
+
+
+    
+
+@media(min-width:768px){
+    .navegacion a {
+        display: inline;
+      margin: 2rem;
+       
+        
+        
+    }
+}
+
+@media(min-width:768px){
+    .navegacion{
+        position: relative;
+        top: unset;
+        width: auto;
+        margin: -12rem;
+        padding: 3rem;
+       
+       
+        
+       
+    }
+}
+
+
+.hamburguesa span{
+    width: 5rem;
+    height: 1rem;
+    border: 3px solid white;
+    background-color: #A0BFBF;
+   display: block;
+   cursor: pointer;
+   background-color: unset;
+}
+.hamburguesa{
+    background-color:#A0BFBF ;
+ 
+}
+
+@media(min-width:768px) {
+    .hamburguesa{
+        display:none
+    }
+}
+/* Contendio encabezado */
+
+@media(min-width:768px){
+    .contenido-encabezado{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 85%;
+    }
+    .contenido-encabezado , .formulario-encabezado{
+        flex: 0 0 calc(50% -1rem);
+    }
+}
+
+
+.texto-encabezado h1{
+    font-size: 3.2rem;
+    color:  #FEF5E7    ;
+    font-weight: 800 bold;
+    text-align: center;
+    padding-top: 8rem;
+  margin-top: 10rem;
+}
+@media(min-width:768px){
+    .texto-encabezado h1{
+        font-size: 5rem;
+        text-align: left;
+        font-weight: 700px;
+        padding-top: 0;
+    }
+}
+
+.formulario-encabezado{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    border-radius: .5rem;
+}
+.formulario-encabezado h2{
+    font-size: 2.5rem;
+}
+
+.formulario-encabezado h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+}
+.input-encabezado{
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.input-encabezado input{
+    width: 100%;
+   padding: 0 1.6rem;
+   height: 4.8rem;
+   border: 1px solid #f1f1f1f1;
+   border-radius: .5rem;
+   font-family: var(--parrafos);
+   font-size: 1.9rem;
+   text-align: center;
+}
+
+/* Ventajas */
+@media(min-width:768px){
+ .contenido-ventajas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+ }
+}
+
+
+
+.ventajas{
+    padding: 5rem;
+     background-color: #CACFD2 ;
+     
+}
+.ventaja{
+    color: #212F3C;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2.3rem;
+}
+.ventaja i {
+    font-size: 4rem;
+}
+.ventaja {
+    font-size: 2.5rem;
+}
+.ventaja p {
+    font-size: 1.5rem;
+}
+/* Sobre Nosotros */
+
+.nosotros h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--azuloscuro);
+}
+.contenido-nosotros{
+    background-image: url(https://cdn.pixabay.com/photo/2017/07/31/14/45/code-2558220_1280.jpg);
+   /* background-image: url(https://www.omegadigital.com.br/wp-content/uploads/2019/12/qual-a-importancia-da-TI-para-a-sua-empresa-img-1.jpg);*/
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-size: cover;
+    background-position: center center;
+}
+@media(min-width:768px){
+    .contenido-nosotros{
+        grid-template-columns: repeat(2,1fr);
+        background-attachment: fixed;
+    }
+}
+
+.texto-nosotros{
+    padding: 2rem;
+    grid-row: 2/3;
+    background-color: var(--blanco);
+}
+@media(min-width:768px){
+    .texto-nosotros{
+        padding: 5rem;
+    }
+}
+.texto-nosotros h3{
+    font-size: 3.4rem;
+    color: var(--azuloscuro);
+    text-align: center;
+}
+.texto-nosotros p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.navegacion a {
+    padding-top: 1rem;
+}
+/* Servicios */
+.servicios{
+    padding-top: 4rem;
+}
+
+.servicios h2{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--azuloscuro);
+}
+@media(min-width:768px){
+    .contenido-servicio{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 4rem;
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.servicio i {
+   background-color:#34495E  ;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 3rem;
+    box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
+}
+.servicio h3{
+    font-size: 2.5rem;
+    color: #A0BFBF;
+}
+.servicios h2 {
+   color: #424949;
+}
+.servicio p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.servicio i:hover{
+    background-color: #616A6B;
+    cursor: pointer;
+}
+/* Contacto */
+.contacto{
+   padding-top: 5rem;
+}
+.contacto h2{
+    text-align: center;
+    font-size: 5rem;
+    color: #1F618D;
+}
+@media(min-width:768px){
+.contenido-contacto{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+}
+.informacion-contacto{
+    background-image: url(https://img.blogs.es/anexom/wp-content/uploads/2018/03/programacion.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion-contacto::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.contenido-contacto h3 {
+    font-size: 4rem;
+    color: #FEF5E7;
+    text-align: center;
+}
+.contenido-contacto p{
+    color: #FEF5E7;
+    font-size: 2.2rem;
+}
+.formulario-contacto{
+    padding: 5rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  #34495E  ;
+}
+.input-contacto label{
+color: var(--blanco);
+font-family: var(--parrafos);
+display: block;
+margin: 1rem 0;
+font-weight: bold;
+}
+.input-contacto input{
+    padding: 1.2rem 1rem;
+    font-family: var(--parrafos);
+}
+.input-contacto input, .input-contacto textarea {
+    width: 100%;
+    outline: none;
+}
+.input-contacto textarea {
+    resize: none;
+}
+.input-contacto input[type = "submit"]{
+    width: auto;
+    padding: 1rem 3rem;
+}
+@media(min-width:768px){
+.footer{
+   display: flex;
+   justify-content: space-around;
+   
+
+}
+    }
+.footer .logo h2{
+    text-align: center;
+}    
+
+.footer p {
+    font-size: 1.4rem;
+    font-weight: var(--parrafos);
+    padding-top: 2rem;
+    text-align: center;
+}
+.class_error{
+    text-align: center;
+    display: block;
+    background-color:#34495E  ;
+    font-family: var(--parrafos);
+    color: #fff;
+    margin: 1rem;
+    padding: 0;
+   background-color: #05386B ;
+   padding: 1rem;
+ 
+    
+}
+.formulario{
+    background-color: #34495E;
+}
+.btn_enviado{
+    background-color: #CACFD2;
+    text-align: center;
+     display: block;
+    padding: 1rem;
+    margin: 0;
+    font-family: var(--parrafos);
+    color: #0000;
+}
+
+.alerta {
+    text-align: center;
+    padding: 2rem;
+    color: var(--blanco);
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+.error{
+    background-color: grey;
+}
+
+
